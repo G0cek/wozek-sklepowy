@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+.fixed-element {
+    background: cadetblue;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+    nav > a, footer > span {
+        text-decoration: none;
+        font-weight: bold;
+        color: wheat;
+        font-size: 20px;
+        margin: 10px;
+    }
+
+        nav > a:hover {
+            color: indianred;
+        }
+
+.mainpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url(https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcHBpbmclMjBjYXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.basket {
+    height: 70vh;
+    background: aliceblue;
+    margin: 12vw;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.item {
+    
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+}
+
+/*duży ekran*/
+@media only screen and (min-width: 1067px) {
+    .item {
+        height: 15vh;
+        flex-direction: row;
+    }
+}
+
+/*mały ekran*/
+@media only screen and (max-width: 1066px) {
+    .item {
+        height: 35vh;
+        flex-direction: column;
+    }
+
+    .basket {
+        overflow: auto;
+        padding-top: 36vh;
+    }
+}
+
+
+.item_photo > img {
+    width: auto;
+    height: 15vh;
+}
+
+button {
+    font-weight: bold;
+    background: wheat;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: 2px solid indianred;
+    color: indianred;
+    border-radius: 5px;
+}
+
+    button:hover {
+        border: 2px solid wheat;
+        color: wheat;
+        background: indianred;
+        cursor: pointer;
+    }
+
+
